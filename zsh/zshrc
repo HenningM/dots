@@ -1,0 +1,14 @@
+source $HOME/.zsh/zshuery/zshuery.sh
+source $HOME/.profile
+load_defaults
+load_aliases
+load_completion $HOME/.zsh/zshuery/completion
+load_correction
+
+prompts '%n@%m:%{$fg_bold[green]%}$(COLLAPSED_DIR)%{$reset_color%}$(virtualenv_info)%{$fg[yellow]%}%#%{$reset_color%} ' '%{$fg[red]%}$(ruby_version)%{$reset_color%}'
+
+export EDITOR='vim'
+
+chpwd() {
+    update_terminal_cwd
+}
