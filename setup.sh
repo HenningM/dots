@@ -2,6 +2,9 @@
 
 git submodule update --init --recursive
 
+# bin
+ln -s $PWD/bin ../.bin
+
 # vim
 ln -s $PWD/vim ../.vim
 ln -s $PWD/vim/vimrc ../.vimrc
