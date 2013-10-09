@@ -5,7 +5,12 @@ load_aliases
 load_completion $HOME/.zsh/zshuery/completion
 load_correction
 
-prompts '%n@%m:%{$fg_bold[green]%}$(COLLAPSED_DIR)%{$reset_color%}$(virtualenv_info)%{$fg[yellow]%}%#%{$reset_color%} ' '%{$fg[red]%}$(ruby_version)%{$reset_color%}'
+# Prompt
+autoload -U colors && colors
+function EXT_COLOR () { echo -ne "\033[38;5;$1m"; }
+molokai_green=`EXT_COLOR 148`
+molokai_purple=`EXT_COLOR 141`
+prompts '%{$molokai_green%}%n@%m%{$reset_color%}:%{$molokai_purple%}$(COLLAPSED_DIR)%{$reset_color%}%# ' ''
 
 export EDITOR='vim'
 
