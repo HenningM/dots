@@ -11,4 +11,6 @@ fi
 
 export PATH=$HOME/.bin:$PATH
 
-source $HOME/.profile_local
+if [ -e $HOME/.profile_local ]; then
+    source $HOME/.profile_local
+fi
