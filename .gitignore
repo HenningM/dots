@@ -1,3 +1,4 @@
 *.swp
 backup/
-*log
+*.log
+*.local
