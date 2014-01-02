@@ -29,6 +29,7 @@ backup_file ../.profile
 backup_file ../.zsh
 backup_file ../.zshrc
 backup_file ../.gitconfig
+backup_file ../.tmux.conf
 echo ""
 
 configure_git
@@ -52,4 +53,7 @@ ln -s $PWD/zsh/zshrc ../.zshrc
 
 # git
 ln -s $PWD/gitconfig.local ../.gitconfig
+
+# tmux
+ln -s $PWD/tmux.conf ../.tmux.conf
 echo "OK"
