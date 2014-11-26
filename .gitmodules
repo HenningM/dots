@@ -4,3 +4,9 @@
 [submodule "zsh/zshuery"]
 	path = zsh/zshuery
 	url = https://github.com/myfreeweb/zshuery.git
+[submodule "vendor/gvp"]
+	path = vendor/gvp
+	url = https://github.com/pote/gvp.git
+[submodule "vendor/gpm"]
+	path = vendor/gpm
+	url = https://github.com/pote/gpm.git
