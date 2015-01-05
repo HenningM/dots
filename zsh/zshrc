@@ -21,3 +21,6 @@ alias ccat="pygmentize -g -f 256 -O style=monokai"
 chpwd() {
     update_terminal_cwd
 }
+
+# Emacs mode, because modal editors and command lines don't mix well
+bindkey -e
