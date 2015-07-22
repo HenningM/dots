@@ -8,6 +8,3 @@ export PATH=$HOME/.bin:$PATH
 if [ -e $HOME/.profile_local ]; then
     source $HOME/.profile_local
 fi
-
-# Swap Caps Lock & Escape
-xmodmap .swapCapsEsc

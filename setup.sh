@@ -47,9 +47,6 @@ ln -s $PWD/vim/vimrc ../.vimrc
 # profile
 ln -s $PWD/profile ../.profile
 
-# xmodmap
-ln -s $PWD/swapCapsEsc ../.swapCapsEsc
-
 # zsh
 ln -s $PWD/zsh ../.zsh
 ln -s $PWD/zsh/zshrc ../.zshrc
