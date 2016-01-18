@@ -10,3 +10,6 @@
 [submodule "vendor/gpm"]
 	path = vendor/gpm
 	url = https://github.com/pote/gpm.git
+[submodule "vendor/nvm"]
+	path = vendor/nvm
+	url = https://github.com/creationix/nvm.git
