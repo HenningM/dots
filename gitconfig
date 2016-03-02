@@ -6,5 +6,6 @@
 [core]
 	editor = vim
 	deltaBaseCacheLimit = 1G
+	excludesfile = ~/.global_gitignore
 [push]
 	default = upstream
