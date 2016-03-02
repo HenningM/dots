@@ -56,4 +56,7 @@ ln -s $PWD/gitconfig.local ../.gitconfig
 
 # tmux
 ln -s $PWD/tmux.conf ../.tmux.conf
+
+# user-dirs
+ln -sf $PWD/user-dirs.dirs ../.config/
 echo "OK"
