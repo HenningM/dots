@@ -1,5 +1,6 @@
 configure_git() {
-    if [ ! -f $PWD/gitconfig -o -f $PWD/gitconfig.local ]; then
+    mkdir -p $PWD/stow/git
+    if [ ! -f $PWD/templates/gitconfig -o -f $PWD/stow/git/.gitconfig ]; then
         echo -n ""
     else
         echo "Git config"
@@ -12,6 +13,6 @@ configure_git() {
             git_name=$iname
         fi
 
-        cat $PWD/gitconfig | sed "s/NAME/$git_name/;s/EMAIL/$git_email/" > $PWD/gitconfig.local
+        cat $PWD/templates/gitconfig | sed "s/NAME/$git_name/;s/EMAIL/$git_email/" > $PWD/stow/git/.gitconfig
     fi
 }

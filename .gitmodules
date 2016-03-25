@@ -1,15 +1,3 @@
-[submodule "vim"]
-	path = vim
-	url = https://github.com/HenningM/vimconfig.git
-[submodule "zsh/zshuery"]
-	path = zsh/zshuery
-	url = https://github.com/myfreeweb/zshuery.git
-[submodule "vendor/gvp"]
-	path = vendor/gvp
-	url = https://github.com/pote/gvp.git
-[submodule "vendor/gpm"]
-	path = vendor/gpm
-	url = https://github.com/pote/gpm.git
-[submodule "vendor/nvm"]
-	path = vendor/nvm
-	url = https://github.com/creationix/nvm.git
+[submodule "stow/vim/.vim"]
+	path = stow/vim/.vim
+	url = git@github.com:HenningM/vimconfig.git
