@@ -1,3 +1,6 @@
 [submodule "stow/vim/.vim"]
 	path = stow/vim/.vim
 	url = git@github.com:HenningM/vimconfig.git
+[submodule "stow/nvm/.nvm"]
+	path = stow/nvm/.nvm
+	url = git@github.com:creationix/nvm.git
