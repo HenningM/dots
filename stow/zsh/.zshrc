@@ -1,5 +1,9 @@
 source $HOME/.profile
 
+# Autocompletion
+autoload -U compinit && compinit
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
+
 # Prompt
 autoload -U colors && colors
 function EXT_COLOR () { echo -ne "\033[38;5;$1m"; }
@@ -9,7 +13,7 @@ molokai_grey=`EXT_COLOR 244`
 export PROMPT="%{$molokai_grey%}[%?] %{$molokai_green%}%n@%m%{$reset_color%}:%{$molokai_purple%}%3~%{$reset_color%}%# "
 export HISTFILE="$HOME/.zsh_history"
 
-export EDITOR='vim'
+export EDITOR="vim"
 
 # Aliases
 alias ls="ls --color"
