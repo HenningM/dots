@@ -6,7 +6,7 @@ fi
 export PATH=$HOME/.bin:$PATH
 
 # Source NVM if available
-export NVM_DIR="$HOME/.nvm"
+export NVM_DIR=$(readlink -f "$HOME/.nvm")
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
 
 if [ -e $HOME/.profile_local ]; then
