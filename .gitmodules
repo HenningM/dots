@@ -4,3 +4,7 @@
 [submodule "stow/nvm/.nvm"]
 	path = stow/nvm/.nvm
 	url = git@github.com:creationix/nvm.git
+[submodule "stow/neovim/.config/nvim"]
+	path = stow/neovim/.config/nvim
+	url = git@github.com:HenningM/neovim-config.git
+	branch = master
