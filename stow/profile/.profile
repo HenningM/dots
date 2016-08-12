@@ -9,6 +9,6 @@ export PATH=$HOME/.bin:$PATH
 export NVM_DIR=$(readlink -f "$HOME/.nvm")
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
 
-if [ -e $HOME/.profile_local ]; then
-    source $HOME/.profile_local
+if [ -d $HOME/.profile.d ]; then
+  for p in $HOME/.profile.d/*; do source $p; done
 fi
