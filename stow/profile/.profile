@@ -12,3 +12,7 @@ export NVM_DIR=$(readlink -f "$HOME/.nvm")
 if [ -d $HOME/.profile.d ]; then
   for p in $HOME/.profile.d/*; do source $p; done
 fi
+
+if [ "$DESKTOP_SESSION" = "i3" ]; then
+  export $(gnome-keyring-daemon -s)
+fi
