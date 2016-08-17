@@ -15,6 +15,7 @@ export PROMPT="%{$molokai_grey%}[%?] %{$molokai_green%}%n@%m%{$reset_color%}:%{$
 
 # Command history
 export HISTFILE="$HOME/.zsh_history"
+setopt inc_append_history
 
 export EDITOR="vim"
 
