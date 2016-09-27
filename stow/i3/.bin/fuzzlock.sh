@@ -1,5 +1,8 @@
 #!/bin/sh -e
 
+# Kill any existing i3lock instances
+killall -q i3lock || true
+
 # Take a screenshot
 scrot /tmp/screen_locked.png
 
