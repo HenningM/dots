@@ -8,3 +8,6 @@
 	path = stow/neovim/.config/nvim
 	url = git@github.com:HenningM/neovim-config.git
 	branch = master
+[submodule "stow/emacs/.emacs.d"]
+	path = stow/emacs/.emacs.d
+	url = https://github.com/syl20bnr/spacemacs
