@@ -14,8 +14,9 @@ molokai_grey=`EXT_COLOR 244`
 export PROMPT="%{$molokai_grey%}[%?] %{$molokai_green%}%n@%m%{$reset_color%}:%{$molokai_purple%}%3~%{$reset_color%}%# "
 
 # Command history
-export HISTFILE="$HOME/.zsh_history"
+export HISTFILE=~/.zsh_history
 export HISTSIZE=10000
+export SAVEHIST=10000
 setopt inc_append_history
 
 export EDITOR="vim"
