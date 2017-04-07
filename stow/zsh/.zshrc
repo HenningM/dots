@@ -25,5 +25,10 @@ export EDITOR="vim"
 alias ls="ls --color"
 alias ccat="pygmentize -g -f 256 -O style=monokai"
 
+# Functions
+function cless() {
+  ccat "$1" | less -r
+}
+
 # Emacs mode, because modal editors and command lines don't mix well
 bindkey -e
