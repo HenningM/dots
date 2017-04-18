@@ -2,11 +2,12 @@
 
 show_mem_free() {
   color=
-  raw_free=`free | awk '/buffers\/cache:/ {print $4}'`
-  raw_total_mem=`free | awk '/Mem:/ {print $2}'`
-  human_free=`free -h | awk '/buffers\/cache:/ {print $4}'`
-  free_pct=$(($raw_free*100/$raw_total_mem))
-  status=" $human_free"
+  raw_total_mem=`awk '/MemTotal/ {print $2}' /proc/meminfo`
+  raw_avail=`awk '/MemAvailable/ {print $2}' /proc/meminfo`
+  human_avail=`bc <<< "scale=1; $raw_avail / (1024*1024)"`
+  human_avail=`echo $human_avail GB`
+  free_pct=$(($raw_avail*100/$raw_total_mem))
+  status=" $human_avail"
 
   if (($free_pct > 50)); then
     color="green"
