@@ -10,9 +10,9 @@ show_mem_free() {
   status=" $human_avail"
 
   if (($free_pct > 50)); then
-    color="green"
+    color="#00ff00"
   elif (($free_pct < 20)); then
-    color="red"
+    color="#ff0000"
   fi
   i3cat encode --name memfree --instance "free memory" --color "${color}" "${status}"
 }
