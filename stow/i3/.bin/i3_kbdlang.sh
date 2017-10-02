@@ -2,10 +2,10 @@
 
 show_kbd_lang() {
   color=
-  lang=`setxkbmap -query | awk '/layout:/ {print $2}'`
+    lang=`setxkbmap -query | awk '/layout:/ {print toupper($2)}'`
   status=" $lang"
 
-  if [ "$lang" = "no" ]; then
+  if [ "$lang" = "NO" ]; then
     color="#ff0000"
   fi
   i3cat encode --name kbdlang --instance "keyboard language" --color "${color}" "${status}"
