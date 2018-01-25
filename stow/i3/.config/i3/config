@@ -179,5 +179,5 @@ bar {
 # Autostart applications
 exec --no-startup-id /usr/lib/gnome-settings-daemon/gnome-settings-daemon
 exec --no-startup-id xautolock -time 10 -locker 'fuzzlock.sh'&
-exec --no-startup-id compton -b
+exec --no-startup-id compton -b --config ~/.compton.conf
 exec --no-startup-id nm-applet
