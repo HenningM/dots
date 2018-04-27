@@ -28,6 +28,11 @@ if [ "$audio_status" = "" ]; then
   unlock_cmds="$unlock_cmds$unmute_cmd;"
 fi
 
+# Disable notifications while screen is locked
+killall -SIGUSR1 dunst # Pause dunst
+resume_dunst_cmd="killall -SIGUSR2 dunst"
+unlock_cmds="$unlock_cmds$resume_dunst_cmd;"
+
 # Run i3lock & any unlock commands
 lock_screen $unlock_cmds&
 
