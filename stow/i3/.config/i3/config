@@ -181,6 +181,7 @@ mode "music" {
   bindsym j exec --no-startup-id "gpmdp-cli volume decreaseVolume"
   bindsym k exec --no-startup-id "gpmdp-cli volume increaseVolume"
   bindsym l exec --no-startup-id "gpmdp-cli playback forward"
+  bindsym p exec --no-startup-id "gpmdp-cli playback playPause"
 
   bindsym Return mode "default"
   bindsym Escape mode "default"
