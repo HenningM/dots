@@ -7,7 +7,7 @@ print_usage() {
 }
 
 show_crypto_ticker() {
-  color="00ff00";
+  color="#00ff00";
   ticker_data=`curl -s "$CM_API/ticker/$1/?convert=NOK"`;
   market_code=`echo $ticker_data | jq -r .[0].symbol`;
   price=`echo $ticker_data | jq -r .[0].price_nok | xargs printf "%.*f" 2`;
