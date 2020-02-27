@@ -36,8 +36,8 @@ echo "xautolock -enable;" >> $unlock_cmds_file
 pa_sink_status=$(pactl list sinks | grep -Ei "Name:|Mute:" | cut -d " " -f 2)
 pa_sinks_to_mute=$(find_unmuted_sinks "$pa_sink_status")
 
-echo "$pa_sinks_to_mute" | while read -r sink; do
-  unmute_cmd="pactl set-sink-mute $sink 0"
+echo -n "$pa_sinks_to_mute" | while read -r sink; do
+  unmute_cmd="pactl set-sink-mute $sink 0 || true"
   echo "$unmute_cmd;" >> $unlock_cmds_file
   pactl set-sink-mute $sink 1
 done
@@ -48,7 +48,6 @@ resume_dunst_cmd="killall -SIGUSR2 dunst"
 echo "$resume_dunst_cmd;" >> $unlock_cmds_file
 
 # Run i3lock & any unlock commands
-cat $unlock_cmds_file
 lock_screen $unlock_cmds_file&
 
 # Turn the screen off after a delay.
