@@ -1,4 +1,4 @@
-#!/bin/sh -e
+#!/bin/bash -e
 
 # Kill any existing i3lock instances
 killall -q i3lock || true
@@ -19,8 +19,7 @@ find_unmuted_sinks() {
   echo "$pa_sink_status" | while read -r sink; do
     read -r sink_muted
     if [ "$sink_muted" = "no" ]; then
-      echo "$sink"
-      pa_sinks_to_mute="$pa_sinks_to_mute $sink"
+      echo "$sink\n"
     fi
   done
 }
@@ -36,7 +35,7 @@ echo "xautolock -enable;" >> $unlock_cmds_file
 pa_sink_status=$(pactl list sinks | grep -Ei "Name:|Mute:" | cut -d " " -f 2)
 pa_sinks_to_mute=$(find_unmuted_sinks "$pa_sink_status")
 
-echo -n "$pa_sinks_to_mute" | while read -r sink; do
+echo -ne "$pa_sinks_to_mute" | while read -r sink; do
   unmute_cmd="pactl set-sink-mute $sink 0 || true"
   echo "$unmute_cmd;" >> $unlock_cmds_file
   pactl set-sink-mute $sink 1
