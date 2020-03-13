@@ -1,6 +1,6 @@
-# Enable 256 colors in terminal
-if [ -e /lib/terminfo/x/xterm-256color ] && [[ $TERM != *screen* ]]; then
-    export TERM='xterm-256color'
+# Enable true colors in terminal
+if [ -e /lib/terminfo/x/xterm-kitty ]; then
+    export TERM='xterm-kitty'
 fi
 
 export PATH=$HOME/.bin:$PATH
