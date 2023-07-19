@@ -1,0 +1,12 @@
+
+# move workspace (to different output)
+mode "move workspace" {
+  bindsym h move workspace to output left
+  bindsym j move workspace to output down
+  bindsym k move workspace to output up
+  bindsym l move workspace to output right
+
+  bindsym Return mode "default"
+  bindsym Escape mode "default"
+}
+bindsym $mod+m mode "move workspace"
