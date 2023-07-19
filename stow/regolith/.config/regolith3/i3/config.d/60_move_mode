@@ -1,6 +1,6 @@
 
 # move workspace (to different output)
-mode "move workspace" {
+mode "Move WS Mode" {
   bindsym h move workspace to output left
   bindsym j move workspace to output down
   bindsym k move workspace to output up
@@ -9,4 +9,4 @@ mode "move workspace" {
   bindsym Return mode "default"
   bindsym Escape mode "default"
 }
-bindsym $mod+m mode "move workspace"
+bindsym $mod+m mode "Move WS Mode"
