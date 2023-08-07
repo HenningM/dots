@@ -2,4 +2,5 @@
 backup/
 *.log
 *.local
+!.local/
 stow/git/.gitconfig

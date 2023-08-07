@@ -1,0 +1,17 @@
+## Take screenshot
+set_from_resource $wm.binding.screenshot wm.binding.screenshot Print
+set_from_resource $wm.program.screenshot wm.program.screenshot take_screenshot.sh
+
+bindsym $wm.binding.screenshot exec --no-startup-id $wm.program.screenshot
+
+## Take screenshot of selected area
+set_from_resource $wm.binding.screenshot.selection wm.binding.screenshot.selection Shift+Print
+set_from_resource $wm.program.screenshot.selection wm.program.screenshot.selection take_screenshot.sh -s
+
+bindsym $wm.binding.screenshot.selection exec --no-startup-id $wm.program.screenshot.selection
+
+## Take screenshot of specific window
+set_from_resource $wm.binding.screenshot.window wm.binding.screenshot.window Alt+Print
+set_from_resource $wm.program.screenshot.window wm.program.screenshot.window take_screenshot.sh -w
+
+bindsym $wm.binding.screenshot.window exec --no-startup-id $wm.program.screenshot.window

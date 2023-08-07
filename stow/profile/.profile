@@ -10,7 +10,7 @@ export NVM_DIR=$(readlink -f "$HOME/.nvm")
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
 
 if [ -d $HOME/.profile.d ]; then
-  for p in $HOME/.profile.d/*; do source $p; done
+  for p in $HOME/.profile.d/*; do . $p; done
 fi
 
 if [ "$DESKTOP_SESSION" = "i3" ]; then

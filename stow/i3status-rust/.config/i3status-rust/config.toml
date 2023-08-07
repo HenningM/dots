@@ -14,6 +14,16 @@ icons = "material-nf"
 block = "music"
 
 [[block]]
+block = "custom"
+command = "screen_recording.sh status"
+interval = "once"
+signal = 8
+json = true
+[[block.click]]
+button = "left"
+cmd = "screen_recording.sh toggle"
+
+[[block]]
 block = "disk_space"
 path = "/"
 info_type = "available"

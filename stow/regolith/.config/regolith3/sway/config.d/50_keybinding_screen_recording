@@ -1,0 +1,17 @@
+## Start screen recording
+set_from_resource $wm.binding.screenrecording wm.binding.screenrecording $mod+Print
+set_from_resource $wm.program.screenrecording wm.program.screenrecording screen_recording.sh toggle
+
+bindsym $wm.binding.screenrecording exec --no-startup-id $wm.program.screenrecording toggle
+
+## Start screen recording of selected area
+set_from_resource $wm.binding.screenrecording.selection wm.binding.screenrecording.selection $mod+Shift+Print
+set_from_resource $wm.program.screenrecording.selection wm.program.screenrecording.selection screen_recording.sh toggle -s
+
+bindsym $wm.binding.screenrecording.selection exec --no-startup-id $wm.program.screenrecording.selection
+
+## Start screen recording of specific window
+set_from_resource $wm.binding.screenrecording.window wm.binding.screenrecording.window $mod+Alt+Print
+set_from_resource $wm.program.screenrecording.window wm.program.screenrecording.window screen_recording.sh toggle -w
+
+bindsym $wm.binding.screenrecording.window exec --no-startup-id $wm.program.screenrecording.window
