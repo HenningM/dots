@@ -48,6 +48,7 @@ block = "rofication"
 
 [[block]]
 block = "battery"
+driver = "upower"
 format = " $icon  $percentage {$time |} "
 full_format = " $icon  $percentage {$time |} "
 
