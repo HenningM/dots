@@ -34,7 +34,7 @@ wm.bar.workspace.urgent.border.color: color_red
 wm.bar.workspace.urgent.background.color: color_red
 wm.bar.workspace.urgent.text.color: color_light_1
 
-wm.client.focused.color.border: color_dark_3
+wm.client.focused.color.border: color_light_4
 wm.client.focused.color.background: color_dark_3
 wm.client.focused.color.text: color_light_1
 wm.client.focused.color.indicator: color_blue
@@ -46,9 +46,9 @@ wm.client.focused_inactive.color.text: color_light_4
 wm.client.focused_inactive.color.indicator: color_dark_2
 wm.client.focused_inactive.color.child_border: color_dark_3
 
-wm.client.unfocused.color.border: color_dark_4
-wm.client.unfocused.color.background: color_dark_4
-wm.client.unfocused.color.text: color_dark_2
+wm.client.unfocused.color.border: color_dark_3
+wm.client.unfocused.color.background: color_dark_2
+wm.client.unfocused.color.text: color_dark_3
 wm.client.unfocused.color.indicator: color_dark_2
 wm.client.unfocused.color.child_border: color_dark_4
 
