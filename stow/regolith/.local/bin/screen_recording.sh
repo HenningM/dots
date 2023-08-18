@@ -24,7 +24,8 @@ start_recording()
     esac
   done
 
-  wf-recorder -f "$directory/$filename" > /dev/null 2>&1 &
+  focused_output=$(swaymsg -t get_outputs --raw | jq '. | map(select(.focused == true)) | .[0].name' -r)
+  wf-recorder -o "$focused_output" -f "$directory/$filename" > /dev/null 2>&1 &
 }
 
 stop_recording()
