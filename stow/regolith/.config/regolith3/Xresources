@@ -1,4 +1,4 @@
-regolith.look.path: /home/henning/.config/regolith3/looks/hm
+regolith.look.path: /home/henning/.config/regolith3/looks/sonokai
 wm.binding.launcher.app: d
 wm.binding.display: s
 wm.bar.status_command: i3status-rs
