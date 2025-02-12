@@ -4,7 +4,7 @@ echo "Dependencies"
 echo "------------"
 set -ex
 sudo apt-get update
-sudo apt-get install git mosh zsh stow
+sudo apt-get install git mosh zsh stow zsh-autocomplete zsh-syntax-highlighting
 set +x
 echo ""
 
